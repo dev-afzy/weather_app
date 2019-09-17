@@ -18,7 +18,11 @@ const forecast = (lat,long,call)=>{
         }
 
         else{
-           call( 'weather summery :'+body.daily.data[0].summary+'temprature:'+body.currently.temperature+'c')
+           call( 'Weather summery :'+body.daily.data[0].summary+'Temprature:'+
+                body.currently.temperature+'c'+'High temprature'+
+                body.daily.data[0].temperatureHigh+'Low temprature'+
+                body.daily.data[0].temperatureLow)
+          //call('temprature:'+body.currently.temperature+'c'))
            //call('temprature:'+body.currently.temperature+'c')
         }
     })
