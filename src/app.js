@@ -15,6 +15,10 @@ const app = express()
  const handle = path.join(__dirname,'../templates/partial')
  app.use(express.static(assetsPath))
 
+ // setting envitonmrnt port
+
+ const port = process.env.PORT || 5000
+
 //setting handlebar engine and view engine
 app.set('view engine', 'hbs')
 app.set('views', temp)
@@ -112,5 +116,5 @@ app.get('*',(req,res)=>
 })
 
 
-app.listen(5000, ()=>
-console.log("server llistening ti port 5000"))
+app.listen(port, ()=>
+console.log("server llistening ti port "+port))

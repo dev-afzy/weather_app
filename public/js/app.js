@@ -18,7 +18,7 @@ weatherform.addEventListener('submit',(e)=>
     const location = search.value
     
 
-    fetch('http://localhost:5000/weather?address='+location).then((res)=>
+    fetch('/weather?address='+location).then((res)=>
     {
         
         res.json().then((dat)=>{
